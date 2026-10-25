@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Technical Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* Element Selector */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+        }
+
+        /* ID Selector */
+        #header {
+            background-color: #243b80;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #162447;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #4059a9;
+            border-radius: 5px;
+        }
+
+        /* Class Selector */
+        .section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #243b80;
+        }
+
+        /* Skills Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #243b80;
+            color: white;
+        }
+
+        /* Buttons */
+        button {
+            background-color: #243b80;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4059a9;
+        }
+
+        /* Relative Position */
+        .relative-box {
+            position: relative;
+            left: 10px;
+            padding: 10px;
+            background-color: #e0e8ff;
+        }
+
+        /* Absolute Position */
+        .parent {
+            position: relative;
+            height: 80px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: #ffd580;
+            padding: 10px;
+        }
+
+        /* Fixed Position */
+        #topButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        hr {
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #162447;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <h1>My Technical Portfolio</h1>
+        <p>Welcome to My Webpage</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="section">
+        <h2>Home</h2>
+        <p>Welcome to my technical portfolio website.</p>
+        <button onclick="alert('Welcome!')">Click Me</button>
+    </section>
+
+    <hr>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>I am a B.Tech student learning HTML and CSS.</p>
+        <p class="relative-box">
+            This element uses relative positioning.
+        </p>
+        <div class="parent">
+            <p class="absolute-box">
+                Absolute Position
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="skills" class="section">
+        <h2>My Technical Skills</h2>
+
+        <table>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Webpage Structure</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Webpage Styling</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Programming</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p>Email: student@example.com</p>
+        <button onclick="alert('Thank you for visiting!')">
+            Contact
+        </button>
+    </section>
+
+    <button id="topButton"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        Back to Top
+    </button>
+
+    <footer>
+        <p>&copy; 2026 My Technical Portfolio</p>
+    </footer>
+
+</body>
+</html>
